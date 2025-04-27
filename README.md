@@ -26,10 +26,10 @@ This repository contains an e-commerce application built using Ionic and Angular
 ![Home Page](assets/home.jpg)
 
 ### Products Page
-![Products Page](path/to/products-page-image.png)
+![Products Page](assets/new-products.jpg)
 
 ### Profile Page
-![Profile Page](path/to/profile-page-image.png)
+![Profile Page](assets/profile.jpg)
 
 ## Installation and Setup
 
