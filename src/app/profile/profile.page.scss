@@ -1,0 +1,40 @@
+.profile-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    border: 3px solid var(--ion-color-primary);
+    border-radius: 50%;
+  }
+  
+  .profile-name {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile-membership {
+    font-size: 14px;
+    color: var(--ion-color-warning);
+    font-weight: 500;
+  }
+  
+  .profile-actions ion-item {
+    --padding-start: 16px;
+    --inner-padding-end: 16px;
+    --border-color: transparent;
+    border-bottom: 1px solid var(--ion-color-light);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: var(--ion-color-light-shade);
+  }
+  
+  .logout-button {
+    margin-top: 40px;
+  }
+  

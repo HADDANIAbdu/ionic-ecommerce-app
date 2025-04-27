@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  
+  <!-- Banner Section -->
+  <div class="banner">
+    <img src="https://imgs.search.brave.com/7pSDi6KKZ0rojOk4kYygLjISnZrllp5GCXihoYKu8OM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/emlsbGlvbmRlc2ln/bnMuY29tL2Jsb2cv/d3AtY29udGVudC91/cGxvYWRzL2VDb21t/ZXJjZS0yLmpwZw" alt="Banner Image" />
+    <button expand="full" class="shop-now-button" fill="solid" color="primary">
+      Shop Now
+    </button>
+  </div>
+
+  <!-- Categories Section -->
+  <ion-list>
+    @for (category of categories; track category.name) {
+    <ion-item class="category-item">
+      <ion-icon [name]="category.icon" slot="start"></ion-icon>
+      <ion-label>{{ category.name }}</ion-label>
+    </ion-item>
+    }
+  </ion-list>
+
+  <!-- Featured Products -->
+  <ion-grid>
+    <ion-row>
+      @for (product of featuredProducts; track product.id) {
+      <ion-col size="6">
+        <ion-card>
+          <img [src]="product.imageUrl" alt="Product Image" />
+          <ion-card-content>
+            <h2 style="font-size: 1.1rem; font-weight: bold;color: black;">{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <div class="price">
+              <p>\${{ product.price }}</p>
+            </div>
+            <ion-button expand="block" color="primary">
+              <ion-icon name="cart-outline" slot="start"></ion-icon>
+              Add to Cart
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    }
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

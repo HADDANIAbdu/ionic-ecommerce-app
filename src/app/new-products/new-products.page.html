@@ -1,0 +1,42 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>New Arrivals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+
+  <ion-grid>
+    @for (pair of productPairs; track pair[0].id) {
+      <ion-row>
+
+        @for (product of pair; track product.id) {
+          <ion-col size="6">
+            <ion-card class="product-card">
+              <img [src]="product.imageUrl" alt="Product Image" />
+
+              <ion-card-content>
+                <h2 class="product-name">{{ product.name }}</h2>
+
+                <div class="product-price-container">
+                  <ion-icon name="pricetag-outline" class="price-icon"></ion-icon>
+                  <p class="product-price">${{ product.price }}</p>
+                </div>
+
+                <ion-button expand="block" text-transform="lowercase" size="small" fill="outline" color="primary" class="cart-button">
+                  <ion-icon name="cart-outline" slot="start" ></ion-icon>
+                  Add to Cart
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
+
+      </ion-row>
+    }
+  </ion-grid>
+
+</ion-content>
+
+
+
